@@ -28,6 +28,7 @@ import {
   Globe,
   ChevronDown 
 } from 'lucide-react';
+import CollegeDataForm from './pages/collegeForm';
 
 const queryClient = new QueryClient();
 
@@ -76,6 +77,7 @@ function Header() {
     { path: '/public', label: t('nav.public'), icon: Eye },
     { path: '/admin', label: t('nav.admin'), icon: Settings },
     { path: '/register', label: 'Register', icon: UserPlus },
+    {path:'/college-form', label: 'College Form', icon: Settings}
   ];
 
   const isActivePath = (path) => {
@@ -133,6 +135,9 @@ function Header() {
                   <SelectItem value="ne">🇳🇵 नेपाली</SelectItem>
                 </SelectContent>
               </Select>
+
+
+
 
               {/* Logout Button */}
               {user && (
@@ -317,6 +322,7 @@ const App = () => (
               <Route path="/public" element={<PublicResolved />} />
               <Route path="/register" element={<RegisterPage />} />
               <Route path="/admin" element={<AdminDashboard />} />
+                            <Route path="/college-form" element={<CollegeDataForm />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
