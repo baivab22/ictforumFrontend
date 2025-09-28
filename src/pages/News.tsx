@@ -104,6 +104,7 @@ const News = () => {
       const response: PostsResponse = await API.posts.getPosts(queryParams);
       
       if (response.success && response.data) {
+        
         setPosts(response.data);
         setTotalCount(response.total);
         setTotalPages(response.pagination.pages);
@@ -366,6 +367,7 @@ const News = () => {
                     featured={post.featured}
                     views={post.views}
                     likes={post.likes}
+                    contentEn={post.content}
                   />
                 ))}
               </div>

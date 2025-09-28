@@ -104,7 +104,7 @@ export interface StatsResponse {
 }
 
 // API Configuration
-const API_BASE_URL = 'https://ictforumbackend-4.onrender.com/api';
+const API_BASE_URL = 'http://localhost:8000/api';
 
 const api = axios.create({
   baseURL: API_BASE_URL,

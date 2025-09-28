@@ -27,6 +27,7 @@ interface NewsCardProps {
   author?: string;
   publishedAt: string;
   featured?: boolean;
+  contentEn: string;
 }
 
 // Enhanced Social Media Icons with Brand Colors
@@ -88,6 +89,7 @@ const NewsCard: React.FC<NewsCardProps> = ({
   author = 'Anonymous',
   publishedAt,
   featured = false,
+  contentEn
 }) => {
   const { t, i18n } = useTranslation();
   const [copied, setCopied] = useState(false);
@@ -163,10 +165,14 @@ const NewsCard: React.FC<NewsCardProps> = ({
       <CardHeader className="p-0 relative">
         <div className="relative overflow-hidden group">
           <img
-            src={image}
+              src={`http://localhost:8000/api/posts/images/${image}`}
             alt={title}
             className="w-full h-52 object-cover transition-all duration-700 group-hover:scale-105"
           />
+
+          <p>{contentEn}</p>
+
+
           
           {/* Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-60" />
@@ -179,6 +185,8 @@ const NewsCard: React.FC<NewsCardProps> = ({
               </Badge>
             </div>
           )}
+
+
           
           {/* Category Badge */}
           <div className="absolute top-4 right-4 z-10">

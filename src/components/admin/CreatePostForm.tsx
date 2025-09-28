@@ -125,7 +125,7 @@ const CreatePostForm = ({ onSubmit }) => {
         submitFormData.append('image', file);
       }
 
-      const response = await fetch('http://localhost:5000/api/posts', {
+      const response = await fetch('http://localhost:8000/api/posts', {
         method: 'POST',
         body: submitFormData,
       });

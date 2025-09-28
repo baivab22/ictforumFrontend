@@ -171,7 +171,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
             </form>
 
             {/* Demo Credentials */}
-            <div className="mt-8 p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl border border-blue-100">
+            {/* <div className="mt-8 p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl border border-blue-100">
               <div className="text-center">
                 <h4 className="font-semibold text-blue-900 mb-3 flex items-center justify-center">
                   <Sparkles className="mr-2 text-blue-600" size={16} />
@@ -189,7 +189,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
                   Use these credentials to explore the admin dashboard
                 </p>
               </div>
-            </div>
+            </div> */}
           </CardContent>
         </Card>
 

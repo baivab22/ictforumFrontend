@@ -228,7 +228,7 @@ const Home = () => {
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/60"></div>
         
-        <div className="relative container mx-auto px-4 py-24 z-10">
+        {/* <div className="relative container mx-auto px-4 py-24 z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
               {t('home.hero.title', 'Digital Nepal Initiative')}
@@ -249,7 +249,7 @@ const Home = () => {
               </Link>
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
 
       {/* Stats Section */}
@@ -340,6 +340,7 @@ const Home = () => {
                     author={post.author.name}
                     publishedAt={post.publishedAt}
                     featured={post.featured}
+                    contentEn={post.content}
                   />
                 ))}
               </div>
@@ -466,11 +467,11 @@ const Home = () => {
                 🤝 {t('home.cta.getInvolved', 'Get Involved')}
               </Button>
             </Link>
-            <Link to="/news">
-              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4">
+            {/* <Link to="/news">
+              <Button size="lg" variant="outline" className="border-2 border-white hover:text-blue-900 px-8 py-4">
                 📰 {t('home.cta.exploreNews', 'Explore News')}
               </Button>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>
