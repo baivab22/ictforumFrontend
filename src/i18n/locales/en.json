@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "home": "Home",
+    "news": "News & Forum",
+    "about": "About",
+    "contact": "Contact",
+    "admin": "Admin"
+  },
+  "hero": {
+    "title": "ICT Forum Nepal",
+    "subtitle": "ICT for Social Justice and Digital Transformation of Society",
+    "description": "Empowering Nepal through technology, innovation, and digital transformation for social justice and sustainable development."
+  },
+  "home": {
+    "latestNews": "Latest News",
+    "featuredPosts": "Featured Posts",
+    "categories": "Categories",
+    "readMore": "Read More",
+    "viewAll": "View All News"
+  },
+  "categories": {
+    "technology": "Technology",
+    "digitalTransformation": "Digital Transformation",
+    "socialJustice": "Social Justice",
+    "events": "Events",
+    "innovation": "Innovation",
+    "policy": "Policy & Governance",
+    "education": "Digital Education",
+    "startups": "Tech Startups"
+  },
+  "post": {
+    "publishedOn": "Published on",
+    "author": "Author",
+    "category": "Category",
+    "relatedPosts": "Related Posts"
+  },
+  "about": {
+    "title": "About ICT Forum Nepal",
+    "mission": "Our Mission",
+    "vision": "Our Vision",
+    "missionText": "To promote the use of Information and Communication Technology for social justice, digital transformation, and sustainable development in Nepal.",
+    "visionText": "A digitally empowered Nepal where technology serves as a catalyst for social justice, economic growth, and inclusive development."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "getInTouch": "Get in Touch",
+    "address": "Address",
+    "email": "Email",
+    "phone": "Phone",
+    "followUs": "Follow Us"
+  },
+  "admin": {
+    "login": "Admin Login",
+    "dashboard": "Dashboard",
+    "createPost": "Create Post",
+    "managePosts": "Manage Posts",
+    "title": "Title",
+    "content": "Content",
+    "category": "Category",
+    "image": "Image URL",
+    "publish": "Publish",
+    "edit": "Edit",
+    "delete": "Delete",
+    "save": "Save",
+    "cancel": "Cancel"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error occurred",
+    "success": "Success",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "previous": "Previous",
+    "next": "Next"
+  }
+}
