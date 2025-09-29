@@ -9,7 +9,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import NewsCard from '@/components/NewsCard';
-import API, { Post, PostsResponse } from '@/lib/api';
+import API, { Post, PostsQuery, PostsResponse } from '@/lib/api';
 // import API, { Post, PostsResponse, PostsQuery } from '@/services/api';
 
 // Loading skeleton components
@@ -102,6 +102,8 @@ const News = () => {
       };
 
       const response: PostsResponse = await API.posts.getPosts(queryParams);
+
+      console.log('Fetched posts:', response);
       
       if (response.success && response.data) {
         
@@ -358,7 +360,7 @@ const News = () => {
                   <NewsCard 
                     key={post.id} 
                     id={post.id}
-                    title={currentLanguage === 'np' ? post.title_np : post.title_en}
+                    title={ post.title}
                     excerpt={currentLanguage === 'np' ? post.excerpt_np : post.excerpt_en}
                     image={post.image}
                     category={post.category}
@@ -367,7 +369,7 @@ const News = () => {
                     featured={post.featured}
                     views={post.views}
                     likes={post.likes}
-                    contentEn={post.content}
+                    content={post.content}
                   />
                 ))}
               </div>

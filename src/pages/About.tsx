@@ -133,15 +133,15 @@ const About = () => {
       {/* Team Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          {/* <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Leadership Team</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-green-600 mx-auto rounded-full"></div>
             <p className="text-gray-600 mt-6 max-w-2xl mx-auto">
               Meet the visionary leaders driving Nepal's digital transformation through innovative ICT solutions.
             </p>
-          </div>
+          </div> */}
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {team.map((member, index) => (
               <Card key={index} className="text-center border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                 <CardContent className="p-8">
@@ -159,7 +159,7 @@ const About = () => {
                 </CardContent>
               </Card>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
 

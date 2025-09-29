@@ -30,6 +30,7 @@ export interface Post {
   comments: Comment[];
   publishedAt: string;
   updatedAt: string;
+  content: string; // Added content field
 }
 
 export interface Comment {

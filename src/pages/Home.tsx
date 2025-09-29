@@ -6,8 +6,9 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
 import NewsCard from '@/components/NewsCard';
-import ModernYouTubeSection from '@/components/youtubeSection';
+// import ModernYouTubeSection from '@/components/youtubeSection';
 import API, { Post, StatsResponse } from '@/lib/api';
+import { ModernYoutubeSection } from '@/components/youtubeSection';
 // import API, { Post, StatsResponse } from '@/services/api';
 
 // Loading skeleton components
@@ -213,6 +214,8 @@ const Home = () => {
     },
   ] : [];
 
+  console.log(featuredPosts,"featuredPosts");
+
   return (
     <div className="min-h-screen">
       {/* Hero Section with Background Image */}
@@ -226,7 +229,7 @@ const Home = () => {
         ></div>
         
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/60"></div>
+        {/* <div className="absolute inset-0 bg-black/60"></div> */}
         
         {/* <div className="relative container mx-auto px-4 py-24 z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -329,20 +332,27 @@ const Home = () => {
           ) : (
             <>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {featuredPosts.map((post) => (
+                {featuredPosts.map((post) => {
+                  console.log(post,"post in home");
+                  return(
                   <NewsCard 
                     key={post.id} 
                     id={post.id}
-                    title={currentLanguage === 'np' ? post.title_np : post.title_en}
+                    // title={currentLanguage === 'np' ? post.title_np : post.title_en}
+                          title={post.title}
                     excerpt={currentLanguage === 'np' ? post.excerpt_np : post.excerpt_en}
                     image={post.image}
                     category={post.category}
                     author={post.author.name}
                     publishedAt={post.publishedAt}
                     featured={post.featured}
-                    contentEn={post.content}
+                    content={post.content}
+
                   />
-                ))}
+                )
+                }
+              
+              )}
               </div>
               
               <div className="text-center mt-12">
@@ -476,7 +486,7 @@ const Home = () => {
         </div>
       </section>
 
-      <ModernYouTubeSection/>
+      <ModernYoutubeSection/>
     </div>
   );
 };
