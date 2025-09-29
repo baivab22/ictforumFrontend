@@ -34,9 +34,13 @@ interface NewsCardProps {
 }
 
 // Get API URL based on environment (Vite)
-const API_URL = import.meta.env.MODE === 'production'
-  ? import.meta.env.VITE_PROD_URL || 'https://ictforumbackend-5.onrender.com/api'
-  : import.meta.env.VITE_DEV_URL || 'http://localhost:8000/api';
+const API_URL = 
+// import.meta.env.MODE === 'production'
+//   ? import.meta.env.VITE_PROD_URL ||
+  
+  'https://ictforumbackend-5.onrender.com/api'
+  // :
+  //  import.meta.env.VITE_DEV_URL || 'http://localhost:8000/api';
 
 // Social Media Icons
 const FacebookIcon = ({ size = 18 }: { size?: number }) => (
@@ -352,7 +356,7 @@ const NewsCard: React.FC<NewsCardProps> = ({
       <CardHeader className="p-0 relative">
         <Link to={`/post/${id}`} className="block relative overflow-hidden">
           <div className="aspect-video relative bg-gray-100">
-            {!imageError ? (
+            {/* {!imageError ? ( */}
               <img
                 src={getImageUrl()}
                 alt={title}
@@ -360,11 +364,13 @@ const NewsCard: React.FC<NewsCardProps> = ({
                 onError={() => setImageError(true)}
                 loading="lazy"
               />
-            ) : (
+            {/* ) */}
+            
+             {/* : (
               <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300">
                 <span className="text-gray-400 text-sm">Image unavailable</span>
               </div>
-            )}
+            )} */}
             
             {/* Overlay gradient */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0" />
