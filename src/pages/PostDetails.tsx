@@ -145,7 +145,7 @@ const PostDetails: React.FC = () => {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
   const API_URL = import.meta.env.MODE === 'production'
-    ? import.meta.env.VITE_PROD_URL || 'https://ictforumbackend-4.onrender.com/api'
+    ? import.meta.env.VITE_PROD_URL || 'https://ictforumbackend-5.onrender.com/api'
     : import.meta.env.VITE_DEV_URL || 'http://localhost:8000/api';
   
   const [post, setPost] = useState<Post | null>(null);
