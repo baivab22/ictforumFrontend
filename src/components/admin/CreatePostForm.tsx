@@ -125,7 +125,7 @@ const CreatePostForm = ({ onSubmit }) => {
         submitFormData.append('image', file);
       }
 
-      const response = await fetch('http://localhost:8000/api/posts', {
+      const response = await fetch('https://ictforumbackend-5.onrender.com/api/posts', {
         method: 'POST',
         body: submitFormData,
       });
