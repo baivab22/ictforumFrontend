@@ -35,12 +35,12 @@ interface NewsCardProps {
 
 // Get API URL based on environment (Vite)
 const API_URL = 
-// import.meta.env.MODE === 'production'
-//   ? import.meta.env.VITE_PROD_URL ||
+ import.meta.env.MODE === 'production'
+   ? import.meta.env.VITE_PROD_URL ||
   
   'https://ictforumbackend-5.onrender.com/api'
-  // :
-  //  import.meta.env.VITE_DEV_URL || 'http://localhost:8000/api';
+  :
+    import.meta.env.VITE_DEV_URL || 'http://localhost:8000/api';
 
 // Social Media Icons
 const FacebookIcon = ({ size = 18 }: { size?: number }) => (
